@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_URL = "http://localhost:8000/courses/"; 
+
+const API_URL = import.meta.env.VITE_API_URL + "/courses/";
 
 export interface Course {
   id?: number;

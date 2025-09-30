@@ -1,0 +1,17 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-py"
+}
+
+model Course {
+  id        Int      @id @default(autoincrement())
+  userId    String
+  title     String
+  category  String
+  duration  Int
+  createdAt DateTime @default(now())
+}
